@@ -4,12 +4,14 @@ import { GifGrid } from './components/GifGrid';
 
 
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({dafeaultCategories =[]}) => {
 
     // const categories = ['One Punch', 'Samurai X', 'Dragon Ball'];
 
-    const [categories, setCategories] = useState(['One Punch']);
-    
+    // const [categories, setCategories] = useState(['One Punch']);
+    const [categories, setCategories] = useState(dafeaultCategories);
+
+
     // const handelAdd = ()=> {
     //     setCategories([...categories, 'HunterXHunter']);
     // setCategories((cats)=>[...cats, 'HunterXHunter]);
