@@ -12,7 +12,6 @@ describe('Pruebas en <<AddCategories />', () => {
     beforeEach(()=>{
         jest.clearAllMocks();
         wrapper =  shallow(<AddCategories setCategories={setCategories} />)
-
     })
 
     test('Debe de mostrarse correctamente', () => {
@@ -27,8 +26,7 @@ describe('Pruebas en <<AddCategories />', () => {
 
         input.simulate('change', {target: {value} });
 
-        expect( wrapper.find('p').text().trim() ).toBe(value);
-        
+        expect( wrapper.find('p').text().trim() ).toBe(value);   
     })
     
     test('No debe de postear la información con submit', () => {
@@ -55,11 +53,5 @@ describe('Pruebas en <<AddCategories />', () => {
 
         // 4. el valor del input debe de estar ''
         expect( wrapper.find('input').prop('value')).toBe('');
-
-    })
-    
-    
-    
-    
-   
+    })   
 })

@@ -3,8 +3,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { GifExpertApp } from "../GifExpertApp"
 
-
-
 describe('Pruebas en <GifExpertApp />', () => {
     
     test('Debe mostrarse correctamente', () => {
@@ -20,7 +18,5 @@ describe('Pruebas en <GifExpertApp />', () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.find('GifGrid').length).toBe(categories.length);
-    })
-    
-    
+    })   
 })

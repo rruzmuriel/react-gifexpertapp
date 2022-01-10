@@ -18,13 +18,9 @@ describe('Pruebas en el hook useFetchGifs', () => {
         
         const {result, waitForNextUpdate} = renderHook( ()=> useFetchGifs('One Punch'));
         await waitForNextUpdate()
-        const {data, loading} = result.current;
-        
-        
+        const {data, loading} = result.current;        
         
         expect(data.length).toBe(10);
-        expect(loading).toBe(false);
-    
+        expect(loading).toBe(false);    
     })
-    
 })
